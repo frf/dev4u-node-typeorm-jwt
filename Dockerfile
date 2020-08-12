@@ -23,10 +23,6 @@ RUN ls -la
 
 ARG SERVER_NAME=${SERVER_NAME}
 
-RUN echo $SERVER_NAME
-
-RUN bash -c "sleep 10 && yarn knex:migrate" 
-
-
+RUN bash -c "sleep 10 && echo SERVER_NAME && yarn knex:migrate" 
 
 CMD [ "yarn", "start" ]
