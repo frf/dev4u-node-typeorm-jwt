@@ -21,11 +21,12 @@ RUN pwd
 
 RUN ls -la 
 
-ENV SERVER_NAME=${SERVER_NAME}
-ARG some_variable_name=${some_variable_name}
+ARG APP_DB_HOST=${APP_DB_HOST}
+ARG APP_DB_USER=${APP_DB_USER}
+ARG APP_DB_PASS=${APP_DB_PASS}
+ARG APP_DB_NAME=${APP_DB_NAME}
+ARG APP_SERVER_PORT=${SERAPP_SERVER_PORTVER_NAME}
 
-# RUN bash -c "sleep 10 && yarn knex:migrate" 
-
-RUN yarn test_server
+RUN bash -c "sleep 10 && yarn knex:migrate" 
 
 CMD [ "yarn", "start" ]
