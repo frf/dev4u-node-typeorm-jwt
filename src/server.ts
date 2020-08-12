@@ -17,7 +17,8 @@ connection.then(async connections => {
     app.use('/api', routes);
 
     app.listen(env.SERVER_PORT);
-
+    
+    console.log("Database " + connections.isConnected);
     console.log("Express application is up and running on port " + env.SERVER_PORT);
 
 }).catch(error => console.log("TypeORM connection error: ", error));
