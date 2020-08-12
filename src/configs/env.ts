@@ -6,10 +6,10 @@ dotenv.config({
 
 export default {
     // substitua 'mysql' pelo seu basnco padrão
-    DB_CLIENT: process.env.DB_CLIENT || 'mysql',
-    DB_HOST: process.env.DB_HOST || '127.0.0.1',
-    DB_USER: process.env.DB_USER,
-    DB_PASS: process.env.DB_PASS,
-    DB_NAME: process.env.DB_NAME,
-    SERVER_PORT: process.env.SERVER_PORT,
+    DB_CLIENT: process.env.APP_DB_CLIENT || 'mysql',
+    DB_HOST: process.env.APP_DB_HOST || '127.0.0.1',
+    DB_USER: process.env.APP_DB_USER,
+    DB_PASS: process.env.APP_DB_PASS,
+    DB_NAME: process.env.APP_DB_NAME,
+    SERVER_PORT: process.env.APP_SERVER_PORT,
 };
