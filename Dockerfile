@@ -21,4 +21,6 @@ RUN pwd
 
 RUN ls -la 
 
+RUN bash -c "sleep 10 && yarn knex:migrate" 
+
 CMD [ "yarn", "start" ]
