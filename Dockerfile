@@ -27,6 +27,6 @@ ARG APP_DB_PASS=${APP_DB_PASS}
 ARG APP_DB_NAME=${APP_DB_NAME}
 ARG APP_SERVER_PORT=${SERAPP_SERVER_PORTVER_NAME}
 
-# RUN bash -c "sleep 10 && yarn knex:migrate"  
+RUN bash -c "sleep 10 && yarn knex:migrate" 
 
 CMD [ "yarn", "start" ]
