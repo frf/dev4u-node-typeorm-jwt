@@ -1,6 +1,8 @@
 import path from 'path';
 import env from './src/configs/env';
 
+console.log(env);
+
 module.exports = {
     client: env.DB_CLIENT,
     connection: {
