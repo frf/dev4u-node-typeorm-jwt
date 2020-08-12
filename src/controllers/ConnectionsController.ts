@@ -3,6 +3,7 @@ import db from '../database/connection';
 
 export default class ConnectionsController {
     async index(request: Request, response: Response) {
+        console.log('OKOK');
         const totalConnections = await db('connections').count('* as total');
         const { total } = totalConnections[0];
 

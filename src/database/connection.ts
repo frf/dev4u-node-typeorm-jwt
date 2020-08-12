@@ -1,5 +1,6 @@
 import knex from 'knex';
 import path from 'path';
+import env from '../configs/env';
 
 // const db = knex({
 //     client: 'sqlite3',
@@ -9,17 +10,18 @@ import path from 'path';
 //     useNullAsDefault: true
 // });
 
-
 const db = knex({
-    client: 'mysql',
+    client: env.DB_CLIENT,
     connection: {
-        host : '127.0.0.1',
-        user: 'root',
-        password: 'cs123',
-        database: 'nutdiet'
+        host : env.DB_HOST,
+        user: env.DB_USER,
+        password: env.DB_PASS,
+        database: env.DB_NAME
     },
     useNullAsDefault: true
 });
 
 
 export default db;
+
+
