@@ -4,8 +4,6 @@ dotenv.config({
     path: process.env.NODE_ENV === "production" ? ".env.production" : ".env"
 });
 
-console.log(process.env);
-
 export default {
     // substitua 'mysql' pelo seu basnco padrão
     DB_CLIENT: process.env.DB_CLIENT || 'mysql',
