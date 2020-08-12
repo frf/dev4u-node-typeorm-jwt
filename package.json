@@ -14,7 +14,8 @@
    },
    "scripts": {
       "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-      "test_server": "tsnd --transpile-only --ignore-watch node_modules --respawn teste.ts",
+      "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts",
+      "typeorm:generate": "-d src/database/typeorm/migrations/ -n Connection",
       "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
       "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback"
    },
