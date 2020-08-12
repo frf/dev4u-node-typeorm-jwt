@@ -21,6 +21,8 @@ RUN pwd
 
 RUN ls -la 
 
+ARG SERVER_NAME=${SERVER_NAME}
+
 RUN echo $SERVER_NAME
 
 RUN bash -c "sleep 10 && yarn knex:migrate" 
