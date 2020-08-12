@@ -17,6 +17,8 @@ COPY . .
 
 EXPOSE 8080
 
-RUN yarn knex:migrate
+RUN pwd
+
+RUN ls -la 
 
 CMD [ "yarn", "start" ]
