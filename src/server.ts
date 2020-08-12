@@ -7,6 +7,8 @@ import "reflect-metadata";
 import env from './configs/env';
 import connection from './database/connectionTypeOrm';
 
+console.log(env);
+
 connection.then(async connections => {
 
     const app = express();
