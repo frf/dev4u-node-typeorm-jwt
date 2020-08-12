@@ -21,12 +21,8 @@ RUN pwd
 
 RUN ls -la 
 
-ARG SERVER_NAME=${SERVER_NAME}
+ENV SERVER_NAME=${SERVER_NAME}
 
-ARG some_variable_name=${some_variable_name}
-
-RUN echo "Oh dang look at that $some_variable_name"
-
-RUN bash -c "sleep 10 && echo $SERVER_NAME && yarn knex:migrate" 
+# RUN bash -c "sleep 10 && yarn knex:migrate" 
 
 CMD [ "yarn", "start" ]
