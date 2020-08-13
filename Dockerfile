@@ -17,16 +17,10 @@ COPY . .
 
 EXPOSE 8080
 
-RUN pwd
-
-RUN ls -la 
-
 ARG APP_DB_HOST=${APP_DB_HOST}
 ARG APP_DB_USER=${APP_DB_USER}
 ARG APP_DB_PASS=${APP_DB_PASS}
 ARG APP_DB_NAME=${APP_DB_NAME}
 ARG APP_SERVER_PORT=${SERAPP_SERVER_PORTVER_NAME}
 
-RUN yarn typeorm:migrate
-
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "start"]

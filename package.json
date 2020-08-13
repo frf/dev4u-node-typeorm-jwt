@@ -14,10 +14,7 @@
    },
    "scripts": {
       "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-      "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts",
-      "typeorm:generate": "-d src/database/typeorm/migrations/ -n Connection",
-      "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
-      "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback"
+      "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts"
    },
    "dependencies": {
       "bcryptjs": "^2.4.3",
