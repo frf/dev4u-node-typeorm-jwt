@@ -15,7 +15,7 @@ routes.get('/connections', conenctionsController.index);
 routes.post('/connections', conenctionsController.create);
 
 routes.get('/test', (request: Request, response: Response) => {
-    return response.json({'success': 'OK', 'message': 'Hello World'});
+    return response.json({'success': 'OKx', 'message': 'Hello World'});
 });
 
 export default routes;
