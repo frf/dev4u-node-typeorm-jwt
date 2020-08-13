@@ -13,8 +13,10 @@
       "typescript": "3.3.3333"
    },
    "scripts": {
-      "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-      "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts"
+      "start:dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+      "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts",
+      "start:prod": "ts-node dist/server.js",
+      "build": "tsc -p ."
    },
    "dependencies": {
       "bcryptjs": "^2.4.3",
