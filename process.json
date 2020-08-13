@@ -1,0 +1,12 @@
+{
+    "apps": [{
+        "name" : "nodepm2",
+        "script" : "yarn start:prod",
+        "env" : {
+            "PORT" : 4005
+        },
+        "production" : {
+            "PORT" : 4000
+        }
+    }]
+}
