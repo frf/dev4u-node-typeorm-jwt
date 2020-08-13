@@ -15,7 +15,7 @@ RUN yarn install
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+EXPOSE 80
 
 # ARG APP_DB_HOST=${APP_DB_HOST}
 # ARG APP_DB_USER=${APP_DB_USER}
