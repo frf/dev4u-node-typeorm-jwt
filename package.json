@@ -16,6 +16,7 @@
       "start:dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
       "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts",
       "start:prod": "ts-node dist/server.js",
+      "start": "ts-node dist/server.js",
       "build": "tsc -p ."
    },
    "dependencies": {
