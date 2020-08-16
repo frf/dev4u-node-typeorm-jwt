@@ -47,3 +47,8 @@ app.post('/users/:id', (request, response) => {
   
 ## Add typescript cors
 - yarn add @types/cors -D
+
+
+docker build --rm -t fabiorf/dev4unode . 
+
+docker run --name dev4u  -p 8081:8080 --link mysql  -d fabiorf/dev4unode:latest 

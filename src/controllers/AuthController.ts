@@ -4,6 +4,7 @@ import { sign } from "jsonwebtoken";
 import { REFRESH_TOKEN_SECRET, ACCESS_TOKEN_SECRET } from '../configs/auth';
 import * as bcrypt from "bcryptjs";
 
+
 export default class AuthController {
     async register(request: Request, response: Response) {
         const { name, avatar, email, password, phone, bio } = request.body;

@@ -1,0 +1,10 @@
+{
+    "apps": [
+        {
+            "name": "web",
+            "exec_mode": "fork",
+            "script": "./dist/server.js",
+            "interpreter": "ts-node"
+        }
+    ]
+}

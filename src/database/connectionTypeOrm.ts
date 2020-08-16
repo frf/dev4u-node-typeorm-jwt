@@ -9,7 +9,7 @@ const connection = createConnection({
 	password: env.DB_PASS,
 	database: env.DB_NAME,
 	synchronize: false,
-	migrations: ["src/database/typeorm/migrations/*.ts"],
+	migrations: ["dist/database/typeorm/migrations/*.js"],
 	migrationsRun: false,
 	logging: true,
 	entities: ["dist/**/*.entity.js"]

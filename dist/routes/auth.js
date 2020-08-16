@@ -9,4 +9,7 @@ const routes = express_1.default.Router();
 const authController = new AuthController_1.default();
 routes.post('/login', authController.register);
 routes.post('/register', authController.register);
+routes.get('/test', (request, response) => {
+    return response.json({ 'success': 'OK' });
+});
 exports.default = routes;

@@ -13,7 +13,4 @@ routes.get('/skills', skillsController.index);
 routes.post('/skills', skillsController.create);
 routes.get('/connections', conenctionsController.index);
 routes.post('/connections', conenctionsController.create);
-routes.get('/test', (request, response) => {
-    return response.json({ 'success': 'OK' });
-});
 exports.default = routes;

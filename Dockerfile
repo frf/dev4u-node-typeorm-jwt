@@ -4,12 +4,26 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+RUN yarn global add pm2 
+
 RUN yarn install
 
-RUN yarn global add pm2 
+RUN pm2 install typescript
 
 RUN yarn build
 
-EXPOSE 8080
+ENV APP_DB_HOST=${APP_DB_HOST}
+ENV APP_DB_USER=${APP_DB_USER}
+ENV APP_DB_PASS=${APP_DB_PASS}
+ENV APP_DB_NAME=${APP_DB_NAME}
 
-CMD ["pm2-runtime", "yarn", "start:prod", "src/server.js"]
+ENV REFRESH_TOKEN_SECRET=${REFRESH_TOKEN_SECRET}
+ENV ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
+
+ENV APP_SERVER_PORT=${APP_SERVER_PORT}
+
+RUN export
+
+EXPOSE 3333
+
+CMD ["pm2-runtime", "start", "pm2.json"]

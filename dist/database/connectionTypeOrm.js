@@ -13,7 +13,7 @@ const connection = typeorm_1.createConnection({
     password: env_1.default.DB_PASS,
     database: env_1.default.DB_NAME,
     synchronize: false,
-    migrations: ["src/database/typeorm/migrations/*.ts"],
+    migrations: ["dist/database/typeorm/migrations/*.js"],
     migrationsRun: false,
     logging: true,
     entities: ["dist/**/*.entity.js"]

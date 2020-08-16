@@ -14,8 +14,4 @@ routes.post('/skills', skillsController.create);
 routes.get('/connections', conenctionsController.index);
 routes.post('/connections', conenctionsController.create);
 
-routes.get('/test', (request: Request, response: Response) => {
-    return response.json({'success': 'OK'});
-});
-
 export default routes;
