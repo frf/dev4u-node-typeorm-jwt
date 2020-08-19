@@ -6,16 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const env_1 = __importDefault(require("../configs/env"));
 const connection = typeorm_1.createConnection({
-    type: "mysql",
-    host: env_1.default.DB_HOST,
-    port: 3306,
-    username: env_1.default.DB_USER,
-    password: env_1.default.DB_PASS,
-    database: env_1.default.DB_NAME,
+    type: "postgres",
+    url: env_1.default.DATABASE_URL,
     synchronize: false,
-    migrations: ["dist/database/typeorm/migrations/*.js"],
+    migrations: ["src/database/typeorm/migrations/*.ts"],
     migrationsRun: false,
     logging: true,
-    entities: ["dist/**/*.entity.js"]
+    entities: ["src/**/*.entity.ts"]
 });
 exports.default = connection;

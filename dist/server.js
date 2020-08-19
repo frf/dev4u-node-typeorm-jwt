@@ -11,8 +11,6 @@ const auth_2 = __importDefault(require("./middlewares/auth"));
 require("reflect-metadata");
 const env_1 = __importDefault(require("./configs/env"));
 const connectionTypeOrm_1 = __importDefault(require("./database/connectionTypeOrm"));
-const auth_3 = require("./configs/auth");
-console.log(auth_3.REFRESH_TOKEN_SECRET);
 connectionTypeOrm_1.default.then(async (connections) => {
     const app = express_1.default();
     app.use(cors_1.default());
