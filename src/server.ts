@@ -18,7 +18,7 @@ connection.then(async connections => {
     app.use('/api/auth', routesAuth);
     app.use('/api', authMiddleware, routes);
 
-    app.listen(env.SERVER_PORT);
+    app.listen(process.env.PORT || 3000);
     
     console.log("Database ==> " + connections.isConnected);
     console.log("Express application is up and running on port " + env.SERVER_PORT);
