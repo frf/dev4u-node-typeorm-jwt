@@ -1,11 +1,11 @@
-FROM node:14
+# FROM node:14
 
 # Create app directory
-WORKDIR /usr/src/app
+# WORKDIR /usr/src/app
 
-COPY . .
+# COPY . .
 
-RUN yarn install
+# RUN yarn install
 
 # Bundle app source
 # COPY . .
