@@ -12,5 +12,5 @@ export default {
     DB_PASS: process.env.APP_DB_PASS,
     DB_NAME: process.env.APP_DB_NAME,
     SERVER_PORT: process.env.SERVER_PORT || 3000,
-    DATABASE_URL: process.env.DATABASE_URL,
+    DATABASE_URL: process.env.CLEARDB_DATABASE_URL,
 };
