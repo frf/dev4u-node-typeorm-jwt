@@ -1,0 +1,27 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+    web:
+        build: .
+        command: yarn start
+        volumes:
+          - .:/usr/src/app
+          - /usr/src/app/node_modules
+        ports:
+          - "3000:3000"
+        depends_on:
+          - postgres
+        environment:
+          DATABASE_URL: postgres://todoapp@postgres/todos
+    postgres:
+        image: postgres:9.6.2-alpine
+        environment:
+          POSTGRES_USER: todoapp
+          POSTGRES_PASSWORD: todoapp
+          POSTGRES_DB: todos
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
