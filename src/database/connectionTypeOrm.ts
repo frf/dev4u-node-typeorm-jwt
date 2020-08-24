@@ -1,9 +1,8 @@
 import {createConnection} from "typeorm";
-import env from '../configs/env';
 
 const connection = createConnection({
     type: "mysql",
-	url: env.DATABASE_URL,
+	url: process.env.CLEARDB_DATABASE_URL,
 	synchronize: false,
 	migrations: ["src/database/migrations/*.ts"],
 	migrationsRun: true,
