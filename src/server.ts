@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import routes from './routes/routes';
 import routesAuth from './routes/auth';
-import authMiddleware from './middlewares/auth';
 import "reflect-metadata";
 import env from './configs/env';
 
@@ -16,7 +15,7 @@ connection.then(async connections => {
     app.use(cors());
     app.use(express.json());
     app.use('/api/auth', routesAuth);
-    app.use('/api', authMiddleware, routes);
+    app.use('/api', routes);
 
     app.listen(env.SERVER_PORT);
     

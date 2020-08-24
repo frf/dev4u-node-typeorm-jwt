@@ -2,17 +2,13 @@ import {createConnection} from "typeorm";
 import env from '../configs/env';
 
 const connection = createConnection({
-    type: "mysql",
-	host: env.DB_HOST,
-	port: 3306,
-	username: env.DB_USER,
-	password: env.DB_PASS,
-	database: env.DB_NAME,
+    type: "postgres",
+	url: process.env.DATABASE_URL,
 	synchronize: false,
-	migrations: ["dist/database/typeorm/migrations/*.js"],
-	migrationsRun: false,
+	migrations: ["src/database/migrations/*.ts"],
+	migrationsRun: true,
 	logging: true,
-	entities: ["dist/**/*.entity.js"]
+	entities: ["src/entities/*.ts"]
 });
 
 export default connection;

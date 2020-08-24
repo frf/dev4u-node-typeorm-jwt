@@ -1,17 +1,11 @@
 import express, { Request, Response } from 'express';
-import SkillsController from '../controllers/SkillsController';
-import ConnectionsController from '../controllers/ConnectionsController';
+import HomeController from '../controllers/HomeController';
 import authMiddleware from '../middlewares/auth';
 
 const routes = express.Router();
 
-const skillsController = new SkillsController();
-const conenctionsController = new ConnectionsController();
+const homeController = new HomeController();
 
-routes.get('/skills', skillsController.index);
-routes.post('/skills', skillsController.create);
-
-routes.get('/connections', conenctionsController.index);
-routes.post('/connections', conenctionsController.create);
+routes.get('/users', homeController.index);
 
 export default routes;
