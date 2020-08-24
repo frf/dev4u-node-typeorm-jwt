@@ -15,7 +15,7 @@ export default class AuthController {
 
         const userExist =  await userRepository.findByMail(email);
 
-        if (!userExist) {
+        if (userExist.length > 0) {
             return response.status(400).json({
                 error: 'Email already exists'
             })

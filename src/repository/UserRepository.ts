@@ -5,13 +5,9 @@ import {User} from "../entities/User";
 export class UserRepository extends Repository<User> {
 
     findByMail(email: string) {
-        const user = this.find({
+        return this.find({
             email: email
         });
-
-        console.log('BUSCA: ', user);
-
-        return (user == undefined) ? false : user[0];
     }
 
     findAll() {
