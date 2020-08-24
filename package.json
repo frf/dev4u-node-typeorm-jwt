@@ -4,16 +4,15 @@
    "main": "index.js",
    "license": "MIT",
    "engines": {
-      "node": "14.x"
+      "node": "12.x"
    },
    "devDependencies": {},
    "scripts": {
       "start:dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
       "typeorm:migrate": "tsnd src/database/typeorm/migrations.ts",
       "start:prod": "ts-node dist/server.js",
-      "start": "ts-node dist/server.js",
       "typeorm:generate": "node --require ts-node/register ./node_modules/typeorm/cli.js migration:generate -n Users -d src/database/migrations",
-      "start": "yarn typeorm:migrate && ts-node src/server.ts",
+      "start": "ts-node src/server.ts",
       "build": "tsc -p ."
    },
    "dependencies": {
