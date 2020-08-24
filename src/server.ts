@@ -8,6 +8,8 @@ import env from './configs/env';
 import connection from './database/connectionTypeOrm';
 import { REFRESH_TOKEN_SECRET, ACCESS_TOKEN_SECRET } from './configs/auth';
 
+console.log(process.env.CLEARDB_DATABASE_URL);
+
 connection.then(async connections => {
 
     const app = express();

@@ -2,7 +2,7 @@ import {createConnection} from "typeorm";
 
 const connection = createConnection({
     type: "mysql",
-	url: process.env.CLEARDB_DATABASE_URL,
+	url: process.env.JAWSDB_URL,
 	synchronize: false,
 	migrations: ["src/database/migrations/*.ts"],
 	migrationsRun: true,
