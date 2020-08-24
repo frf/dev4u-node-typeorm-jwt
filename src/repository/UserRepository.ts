@@ -9,6 +9,8 @@ export class UserRepository extends Repository<User> {
             email: email
         });
 
+        console.log('BUSCA: ', user);
+
         return (user == undefined) ? false : user[0];
     }
 
